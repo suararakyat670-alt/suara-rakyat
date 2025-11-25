@@ -1,0 +1,135 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Suara Rakyat - Desa Sungai Segak</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Suara Rakyat</h1>
+    <p>Portal Berita Desa Sungai Segak</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="login.html">Admin</a>
+</nav>
+
+<section id="berita-container">
+    <!-- Berita dari JSON akan tampil otomatis -->
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Berita - Suara Rakyat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">← Kembali</a>
+</nav>
+
+<div id="detail-berita"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Admin - Suara Rakyat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login Admin</h2>
+
+    <form onsubmit="return loginAdmin()">
+        <input type="text" id="user" placeholder="Username" required>
+        <input type="password" id="pass" placeholder="Password" required>
+        <button type="submit">Masuk</button>
+    </form>
+</div>
+
+<script>
+function loginAdmin() {
+    if (user.value === "admin" && pass.value === "12345") {
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Login salah!");
+    }
+    return false;
+}
+</script>
+
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>Dashboard Admin</h2>
+</header>
+
+<nav>
+    <a href="dashboard.html">Data Berita</a>
+    <a href="tambah-berita.html">Tambah Berita</a>
+</nav>
+
+<section id="admin-berita"></section>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Berita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Tambah Berita</h2>
+
+<form id="formTambah">
+    <input type="text" id="judul" placeholder="Judul Berita" required>
+    <textarea id="isi" placeholder="Isi Berita" required></textarea>
+    <input type="file" id="gambar" accept="image/*">
+    <button type="submit">Simpan</button>
+</form>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Berita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Edit Berita</h2>
+
+<form id="formEdit">
+    <input type="text" id="judul" required>
+    <textarea id="isi" required></textarea>
+    <input type="file" id="gambar" accept="image/*">
+    <button type="submit">Update</button>
+</form>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
